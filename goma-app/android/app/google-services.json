@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "41885428773",
+    "project_id": "goma-55730",
+    "storage_bucket": "goma-55730.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:41885428773:android:091a9d08e18449f5c463cc",
+        "android_client_info": {
+          "package_name": "com.goma"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "41885428773-61h7gvbklud84okvc3n0aveu6fjsefs3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.goma",
+            "certificate_hash": "dcfbad88c398d6ee86e046a56a9603cd0612c91c"
+          }
+        },
+        {
+          "client_id": "41885428773-g3f210o3d660e4s1td3ipjjhf83vrndl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXeXlhlduIH9lS5RjkXpRxGjAi-SaI3PM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "41885428773-g3f210o3d660e4s1td3ipjjhf83vrndl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
