@@ -20,7 +20,7 @@ const BookService = ({navigation}) => {
 			<View style={[globalStyles.floatScreenContent, globalStyles.simpleScreenContent, globalStyles.container]}>
 				<ScrollView contentInsetAdjustmentBehavior="automatic" showsVerticalScrollIndicator={false} style={[globalStyles.floatScreenScroll]}>
 					<TouchableOpacity activeOpacity={0.7}>
-						<View style={styles.paymentItem}>
+						<View style={[styles.paymentItem, styles.paymentFirstItem]}>
 							<Image source={config.images.cashIcon} style={styles.paymentIcon} alt='Cash Icon'/>
 							<Text style={styles.paymentName}>{t('service:paymentCOD')}</Text>
 							<Ionicons name={'chevron-forward'} size={20} color={config.colors.black} style={styles.paymentArrow} />

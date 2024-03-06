@@ -12,9 +12,11 @@ const TextAreaField = ({
     label,
     placeholder,
     countText,
+    showlength = false,
     textLength,
     helperText,
     minHeight,
+    require,
     input,
     meta: { touched, error, warning }
 }) => {
@@ -22,26 +24,28 @@ const TextAreaField = ({
         <FormControl>
             {
                 label && 
-                <Text style={globalStyles.labelInputStyle}>{label}</Text>
+                <Text style={globalStyles.labelInputStyle}>
+                    {label} {require && <Text style={{ color: config.colors.red }}>*</Text>}
+                </Text>
             }
             <TextArea 
-                _input={{
-                    selectionColor: config.colors.green,
-                    cursorColor: config.colors.green,
-                }}
-                _focus={{ backgroundColor: 'white' }}
-                minHeight={minHeight ?? 50}
+                _focus={{ borderColor: config.colors.pink, borderWidth: 1 }}
+                borderWidth={0}
+                h={150}
                 maxLength={textLength}
-                style={styles.textAreaStyle}
+                style={[globalStyles.inputStyle ,styles.textAreaStyle]}
                 placeholder={placeholder}
                 placeholderColor={config.colors.gray}
                 onChange={ (event) =>  input.onChange(event)}
                 onBlur={ (event) => input.onBlur(event) }
                 w="100%" 
-                 />
+            />
+            {
+                showlength && 
                 <Text style={styles.countTextStyle}>
                     {countText ?? 0}/{textLength ?? 0}
                 </Text>
+            }
         </FormControl>
     )
 }

@@ -11,6 +11,9 @@ const styles = StyleSheet.create({
         borderBottomColor: '#B5B5B5',
         borderStyle: 'dashed',
     },
+    paymentFirstItem: {
+        paddingTop: 0,
+    },
     paymentIcon: {
         width: 25,
         height: 25,

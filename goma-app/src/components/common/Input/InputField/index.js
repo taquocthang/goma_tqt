@@ -16,6 +16,7 @@ const InputField = ({
     helperText,
     secureTextEntry,
     input,
+    fieldValue,
     propsInput,
     meta: { touched, error, warning },
     icon,
@@ -42,6 +43,7 @@ const InputField = ({
                         cursorColor: config.colors.pink,
                     }}
                     style={[globalStyles.inputStyle, isFocus ? globalStyles.inputStyleFocus : '']}
+                    value={fieldValue}
                     borderWidth={0}
                     placeholder={placeholder}
                     placeholderColor={config.colors.gray}

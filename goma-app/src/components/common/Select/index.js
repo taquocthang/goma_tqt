@@ -11,32 +11,32 @@ const SelectField = ({
     option,
     selectedValue,
     require,
-    onValueChange = () => { },
+    onValueChange = () => {},
     meta: { touched, error, warning },
     ...restProps
 }) => {
     return (
         <FormControl isInvalid={(error && touched)} {...restProps} style={globalStyles.inputRowStyle}>
             {
-                label &&
+                label && 
                 <Text style={globalStyles.labelInputStyle}>
                     {label} {require && <Text style={{ color: config.colors.red }}>*</Text>}
                 </Text>
             }
             <View style={styles.selectWrap}>
-                <Select
-                    borderWidth={0}
-                    style={[globalStyles.inputStyle, { _focus: globalStyles.inputStyleFocus }]}
+                <Select 
+                    borderWidth={0} 
+                    style={[globalStyles.inputStyle, { _focus: globalStyles.inputStyleFocus}]}
                     accessibilityLabel={placeholder}
                     placeholder={placeholder}
                     selectedValue={selectedValue}
-                    dropdownOpenIcon={<Image source={config.images.selectarrow} style={styles.selectIcon} alt='Dropdown' />}
-                    dropdownCloseIcon={<Image source={config.images.selectarrow} style={styles.selectIcon} alt='Dropdown' />}
+                    dropdownOpenIcon={ <Image source={config.images.selectarrow} style={styles.selectIcon} alt='Dropdown'/> }
+                    dropdownCloseIcon={ <Image source={config.images.selectarrow} style={styles.selectIcon} alt='Dropdown'/> }
                     onValueChange={onValueChange}
                     dropdownIcon={() => null}
                 >
                     {
-                        option && option.map((_value, index) => {
+                        option && option.map((_value,index)=>{
                             return (
                                 <Select.Item key={index} label={_value.name} value={_value.value} />
                             )
@@ -45,12 +45,12 @@ const SelectField = ({
                 </Select>
             </View>
             {(error && touched) &&
-                <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />} _text={{ fontSize: 'xs' }}>
-                    {error}
-                </FormControl.ErrorMessage>
+            <FormControl.ErrorMessage leftIcon={<WarningOutlineIcon size="xs" />} _text={{fontSize: 'xs'}}>
+                {error}
+            </FormControl.ErrorMessage>
             }
         </FormControl>
     )
-
+        
 };
 export default SelectField;

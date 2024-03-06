@@ -6,37 +6,38 @@ import { useTranslation } from 'react-i18next';
 import LinearGradient from 'react-native-linear-gradient';
 import styles from './style';
 
-const ServiceBookedSuccessfully = ({ navigation }) => {
+
+const ServiceBookedSuccessfully = ({navigation}) => {
 
 	// LANGUAGE
-	const { t, i18n } = useTranslation();
+    const {t, i18n} = useTranslation();
 
-	return (
+  	return (
 		<View style={globalStyles.screenWrap}>
 			<ImageBackground source={config.images.serviceFullscreenBg} style={styles.screenBg} resizeMode="cover">
 				<View style={[globalStyles.floatScreenContent, globalStyles.simpleScreenContent, globalStyles.container]}>
 					{/* <ScrollView contentInsetAdjustmentBehavior="automatic" showsVerticalScrollIndicator={false} style={[globalStyles.floatScreenScroll]}> */}
-					<View style={styles.photoWrap}>
-						<Image source={config.images.successPhoto} style={styles.photo} alt='Waiting Assign Technician'></Image>
-					</View>
-					<View style={styles.content}>
-						<Text style={styles.title}>{t('service:serviceBookedSuccessTitle')}</Text>
-						<Text style={styles.description}>{t('service:serviceBookedSuccessDesc')}</Text>
-					</View>
-					<View style={styles.buttonBox}>
-						<TouchableOpacity activeOpacity={0.7}>
-							<View style={styles.buttonContent}>
-								<LinearGradient colors={['#FD8792', '#FDB7B2']} style={styles.buttonLinearGradient}>
-									<Text style={styles.buttonText}>{t('service:goHome')}</Text>
-								</LinearGradient>
-							</View>
-						</TouchableOpacity>
-					</View>
+						<View style={styles.photoWrap}>
+							<Image source={config.images.successPhoto} style={styles.photo} alt='Waiting Assign Technician'></Image>
+						</View>
+						<View style={styles.content}>
+							<Text style={styles.title}>{t('service:serviceBookedSuccessTitle')}</Text>
+							<Text style={styles.description}>{t('service:serviceBookedSuccessDesc')}</Text>
+						</View>
+						<View style={styles.buttonBox}>
+							<TouchableOpacity activeOpacity={0.7}>
+								<View style={styles.buttonContent}>
+									<LinearGradient colors={['#FD8792', '#FDB7B2']} style={styles.buttonLinearGradient}>
+										<Text style={styles.buttonText}>{t('service:goHome')}</Text>
+									</LinearGradient>
+								</View>
+							</TouchableOpacity>
+						</View>
 					{/* </ScrollView> */}
 				</View>
 			</ImageBackground>
 		</View>
-	)
+  	)
 }
 
 

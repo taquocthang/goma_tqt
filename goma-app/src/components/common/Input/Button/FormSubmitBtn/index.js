@@ -8,21 +8,39 @@ import styles from './style';
 const FormSubmitBtn = ({
     label,
     icon,
+    isgradient = true,
+    style,
     ...restProps
 }) => {
     return (
         <View style={styles.formSubmitRow}>
             <TouchableOpacity activeOpacity={0.7}>
-                <LinearGradient colors={['#FD8792', '#FDB7B2']} style={styles.btnLinearGradient}>
                 {
-                    icon && 
-                    <Ionicons name={icon} size={31} color={config.colors.white}  />
+                    isgradient && 
+                    <LinearGradient colors={['#FD8792', '#FDB7B2']} style={[styles.btnLinearGradient, style]}>
+                    {
+                        icon && 
+                        <Ionicons name={icon} size={31} color={config.colors.white}  />
+                    }
+                    {
+                        label &&
+                        <Text style={styles.formSubmitTextBtn}>{label ?? ''}</Text>
+                    }
+                    </LinearGradient>
                 }
                 {
-                    label &&
-                    <Text style={styles.formSubmitTextBtn}>{label ?? ''}</Text>
+                    !isgradient && 
+                    <View style={[styles.btnLinearGradient, style]}>
+                    {
+                        icon && 
+                        <Ionicons name={icon} size={31} color={config.colors.white}  />
+                    }
+                    {
+                        label &&
+                        <Text style={styles.formSubmitTextBtn}>{label ?? ''}</Text>
+                    }
+                    </View>
                 }
-                </LinearGradient>
             </TouchableOpacity>
         </View>
     )

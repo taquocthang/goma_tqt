@@ -10,6 +10,7 @@ const inputImage = ({
     label,
     placeholder,
     require,
+    fieldValue,
     onValueChange = () => {},
     meta: { touched, error, warning },
     ...restProps
@@ -18,7 +19,8 @@ const inputImage = ({
     let pickerOptions = {
         mediaType: 'photo',
     };
-    const [imageSource, setImageSource] = useState(config.images.inputimageplacehoder);
+    let imageValue = fieldValue ? fieldValue : config.images.inputimageplacehoder;
+    const [imageSource, setImageSource] = useState(imageValue);
 
     const openGallery = async() => {
         const result = await launchImageLibrary(pickerOptions);

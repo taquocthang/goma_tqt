@@ -1,4 +1,4 @@
-import { StyleSheet , Dimensions} from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 import config from './config';
 
 export const globalStyles = StyleSheet.create({
@@ -30,7 +30,7 @@ export const globalStyles = StyleSheet.create({
     },
     floatScreenScroll: {
         width: '100%',
-    },  
+    },
     floatScreenInner: {
         paddingHorizontal: '4%',
         paddingVertical: 15,
@@ -38,14 +38,14 @@ export const globalStyles = StyleSheet.create({
     },
 
     simpleScreenContent: {
-        marginVertical: 20,
+        marginVertical: 30,
     },
 
     inputRowStyle: {
         width: '100%',
         marginBottom: 20,
     },
-    labelInputStyle:{
+    labelInputStyle: {
         color: config.colors.black,
         fontSize: 14,
         fontWeight: 'bold',
@@ -66,5 +66,5 @@ export const globalStyles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#FD9AA3',
     },
-   
+
 })

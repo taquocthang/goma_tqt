@@ -20,12 +20,13 @@ const InputDateField = ({
     propsInput,
     minDate,
     require,
+    fieldValue,
     setVal = () => {},
     meta: { touched, error, warning },
     ...restProps
 }) => {
     const [date, setDate] = useState(new Date());
-    const [dateOutput, setDateOutput] = useState();
+    const [dateOutput, setDateOutput] = useState(fieldValue);
 
     const [open, setOpen] = useState(false);
     const maskedInputProps = useMaskedInputProps({

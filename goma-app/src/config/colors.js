@@ -4,11 +4,13 @@ export const COLORS = {
     white: '#FFFFFF',
     black: '#000000',
     yellow: '#F0DF12',
-    // red: '#FC5B52',
-    // gray: '#CCCCCC',
+    red: '#D00000',
+    gray: '#CCCCCC',
 
-    red: '#CC0000',
-    gray: '#888888',
     pink: '#FD9AA3',
     placehoder: '#B5B5B5',
+    transparent: 'transparent',
+    star: '#F7D100',
+    nonStar: '#C9C9C9',
+    darkgray: '#888888',
 }

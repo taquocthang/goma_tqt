@@ -2,11 +2,8 @@ import { StyleSheet } from "react-native";
 import config from "../../../config";
 
 const styles = StyleSheet.create({
-    textAreaStyle:{
-        borderColor: config.colors.green,
-        borderWidth: 0,
-        backgroundColor: config.colors.white,
-        fontSize: 14
+    textAreaStyle: {
+        height: 150,
     },
     countTextStyle: {
         fontSize: 12,

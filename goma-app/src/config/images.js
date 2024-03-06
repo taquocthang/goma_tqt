@@ -13,8 +13,19 @@ export const IMAGES = {
     waitingPhoto: require('../assets/images/service/waiting-photo.png'),
     successPhoto: require('../assets/images/service/success-photo.png'),
     serviceFullscreenBg: require('../assets/images/service/service-fullscreen-bg.jpg'),
+    qrcodeImage: require('../assets/images/service/qrcode-image.png'),
+
     productImageThumb: require('../assets/images/service/product-image-thumb.png'),
     technicianImage: require('../assets/images/service/technician-image.png'),
-    starIcon: require('../assets/images/service/star-icon.png'),
+    starIcon: require('../assets/images/common/star-icon.png'),
 
-}
+    servicePhoto: require('../assets/images/service/service-photo.png'),
+    servicePhoto1: require('../assets/images/service/service-photo1.png'),
+    servicePhoto2: require('../assets/images/service/service-photo2.png'),
+    productInfoPhoto: require('../assets/images/service/productInfo-photo.png'),
+    productOrderedPhoto: require('../assets/images/service/productOrdered-photo.png'),
+    productCategoriesPhoto3: require('../assets/images/service/productCategories-photo3.png'),
+    productCategoriesPhoto4: require('../assets/images/service/productCategories-photo4.png'),
+    productCategoriesPhoto5: require('../assets/images/service/productCategories-photo5.png'),
+
+};

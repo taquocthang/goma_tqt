@@ -13,6 +13,7 @@ class Config {
         this.status = STATUS;
         this.fonts = FONTS;
         this.width = Dimensions.get('window').width;
+        this.height = Dimensions.get('window').height;
     }
 
     flashShowMessage = (props) => {
